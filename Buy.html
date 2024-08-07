@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>
+        B_10523005_Luiz
+    </title>
+
+<style>
+footer {
+background-color: #212020;
+color: white;
+text-align: center;
+padding: 10px 0;
+position: fixed;
+width: 100%;
+bottom: 0;
+}
+header {
+background-color: #000000;
+color: white;
+text-align: center;
+padding: 1em 0;
+}
+
+</style>
+<body onLoad="focusTxt()">
+  <header>
+    <h1> Welcome to Blackmarket </h1>
+    Places where you can Buy Illegal Stuff
+  </header>
+  <body background="chro.jpg">
+
+  </body>
+    <form name="form1">
+        <h2>SELAMAT DATANG di Menu CHECKOUT</h2>
+        ==Tekan enter Saat masukkan CODE PRODUCT==
+        <br>
+        <br>
+
+        Input your Phone Number : <input type="text" name="txtNim" id="nim"> <br>====================================<br>
+
+        Name : <input type="text" name="txtMata" id="mata"> <br>
+        CODE PRODUCT : <input type="text" name="txtNilai" id="nilai" onkeypress="cekData(event)"> <br>
+        Price : <input type="text" name="txtIndex" id="index" disabled> <br>
+
+       Description : <input type="text" name="txtKeterangan" id="keterangan" disabled> <br>
+        <input type="button" name="btn2" value="Simpan" onClick="simpan()">
+        <input type="button" name="btn3" value="Tampilkan" onClick="tampil()"> <br><br>
+
+        NIM : <span id="nim1"></span> <br><br>
+        <table border="1" id="hasil"> </table>
+    </form>
+
+    <script type="text/javascript">
+        function cekData(event) {
+            var tombol = event.which || event.getKeyCode;
+            if (tombol === 13) {
+                var kode = document.getElementById('nilai').value;
+                if (kode >= "CDM") {
+                    document.form1.txtIndex.value = "USD 1.100";
+                    document.form1.txtKeterangan.value = "Coffin Dance Man";
+                } else if (kode >= "BDM") {
+                    document.form1.txtIndex.value = "USD 500";
+                    document.form1.txtKeterangan.value = "Bandana Dancing Man";
+                } else if (kode >= "SM") {
+                    document.form1.txtIndex.value = "USD 2000";
+                    document.form1.txtKeterangan.value = "Slap Man";
+                } else if (kode >= "AM") {
+                    document.form1.txtIndex.value = "USD 420.69";
+                    document.form1.txtKeterangan.value = "Amba Man";
+                } else if (kode >= "MM") {
+                    document.form1.txtIndex.value = "USD 5000";
+                    document.form1.txtKeterangan.value = "Muscular Man";
+                } else if (kode >= "ISS") {
+                    document.form1.txtIndex.value = "USD 200";
+                    document.form1.txtKeterangan.value = "IShowSpeed ";
+                } else if (kode >= "KC") {
+                    document.form1.txtIndex.value = "Free";
+                    document.form1.txtKeterangan.value = "Kai Cenat";
+                } else if (kode >= "BJ") {
+                    document.form1.txtIndex.value = "USD 11";
+                    document.form1.txtKeterangan.value = "Beetle Juice";
+                } else {
+                    alert("Data Salah Input ");
+                }
+            }
+        }
+
+        var data = [];
+        var i = 0;
+        var j = 1;
+
+        function focusTxt() {
+            document.form1.txtNim.focus();
+        }
+
+        function simpan() {
+            var nim = document.form1.txtNim.value;
+
+            data[i] = {
+                nim1: nim,
+                matk: document.form1.txtMata.value,
+                num: document.form1.txtNilai.value,
+                dex: document.form1.txtIndex.value,
+                ket: document.form1.txtKeterangan.value
+            };
+
+            document.getElementById('nim1').innerText = nim;
+
+            document.form1.txtNim.value = "";
+            document.form1.txtMata.value = "";
+            document.form1.txtNilai.value = "";
+            document.form1.txtIndex.value = "";
+            document.form1.txtKeterangan.value = "";
+
+            i++;
+            alert("Data Telah Disimpan (stay?)");
+        }
+
+        function tampil() {
+            var isi = "<tr><td><b>No</b></td><td><b>Nama Mata Kuliah</b></td><td><b>Nilai Akhir</b></td><td><b>INDEX</b></td><td><b>KETERANGAN</b></td></tr>";
+            var Total = data.length;
+            for (var i = 0; i < Total; i++) {
+                isi += "<tr><td>" + (j++) + "</td><td>" + data[i].matk + "</td><td>" + data[i].num + "</td><td>" + data[i].dex + "</td><td>" + data[i].ket + "</td></tr>";
+            }
+
+            document.getElementById('hasil').innerHTML = isi;
+        }
+    </script>
+</body>
+
+<footer>
+<table border="0" align="center" width="80%" cellspacing="0">
+  <tr align="center">
+    <td><h4> Contact Us </h4></td>
+    <td><h4> About US </h4></td>
+    <td><h4> Our Creator </h4></td>
+  </tr>
+  <tr align="center">
+    <td><p>0851-5609-7159</p></td>
+    <td><a href="about.html"> BlackMarket </a></td>
+    <td><a href="luiz.html">Luiz Sahadan </a></td>
+  </tr>
+</table>
+</footer>
+</html>

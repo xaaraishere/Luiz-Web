@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kita</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("chro.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+      }
+      header {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+      }
+      .content {
+        width: 100%;
+        max-width: 600px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        text-align: center;
+      }
+      footer {
+        background-color: #212020;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+      .btn {
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 4px;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #000000;
+        color: white;
+      }
+      h1,
+      h2 {
+        margin: 0.5em 0;
+      }
+      img {
+        border-radius: 8px;
+      }
+      table {
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+      }
+      table h4,
+      table p,
+      table a {
+        color: white;
+        margin: 0.5em 0;
+      }
+      table a {
+        text-decoration: none;
+        color: #ddd;
+      }
+      table a:hover {
+        color: white;
+      }
+      marquee {
+        margin: 1em 0;
+      }
+      .transaction-table {
+        width: 50%;
+        margin: 20px auto;
+        border: 0;
+        height: 80%;
+      }
+      .transaction-table img {
+        width: 75%;
+      }
+      .transaction-table td {
+        padding: 15px;
+      }
+      .form-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: block;
+      }
+      .form-group input[type="submit"] {
+        background-color: #ddd;
+        color: black;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+      }
+      .form-group input[type="submit"]:hover {
+        background-color: #000000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Blackmarket</h1>
+      <strong>Places where you can Buy Illegal Stuff</strong>
+      <marquee direction="Left">
+        BUY AT YOUR OWN RISK~~~ BUY AT YOUR OWN RISK~~~ BUY AT YOUR OWN RISK~~~
+        BUY AT YOUR OWN RISK~~~ BUY AT YOUR OWN RISK~~~ BUY AT YOUR OWN RISK~~~
+        BUY AT YOUR OWN RISK~~~ BUY AT YOUR OWN RISK~~~
+      </marquee>
+      <marquee direction="right">
+        BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE
+        CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~
+        BE CAUTIOUS~~~ BE CAUTIOUS~~~ BE CAUTIOUS~~~
+      </marquee>
+    </header>
+
+    <div align="center">
+      <a href="Home.html"><button class="btn">HOME</button></a>
+      <a href="product.html"><button class="btn">Product Services</button></a>
+      <a href="about.html"><button class="btn">About US</button></a>
+      <a href="transaction.html"><button class="btn">Transaction</button></a>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="form-container">
+          <form id="transaction-form">
+            <div class="form-group">
+              <label for="customer-name">Nama:</label>
+              <input type="text" id="customer-name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="product">Pilih Produk:</label>
+              <select name="product" id="product">
+                <option value="CDM" data-price="1100">
+                  Coffin Dance Man - USD 1.100
+                </option>
+                <option value="BDM" data-price="500">
+                  Bandana Dancing Man - USD 500/songs
+                </option>
+                <option value="SM" data-price="2000">
+                  Slap Man - USD 2.000
+                </option>
+                <option value="AM" data-price="420.69">
+                  Amba Man - USD 420.69
+                </option>
+                <option value="MM" data-price="5000">
+                  Muscular Man - USD 5000
+                </option>
+                <option value="KC" data-price="0">
+                  Kai Cenat - Free Trial Once
+                </option>
+                <option value="ISS" data-price="200">
+                  IShowSpeed - USD 200
+                </option>
+                <option value="BJ" data-price="1">
+                  Beetle Juice - USD 1+1=11
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" name="quantity" required />
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+        <div class="content">
+          <h2>Transaction Records</h2>
+          <table id="transaction-records">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var data = [];
+      var i = 0;
+
+      function addTransaction(event) {
+        event.preventDefault();
+
+        var customerName = document.getElementById("customer-name").value;
+        var productSelect = document.getElementById("product");
+        var productText =
+          productSelect.options[productSelect.selectedIndex].text;
+        var productPrice = parseFloat(
+          productSelect.options[productSelect.selectedIndex].getAttribute(
+            "data-price"
+          )
+        );
+        var quantity = parseInt(document.getElementById("quantity").value);
+        var amount = (productPrice * quantity).toFixed(2);
+        var transactionId = "US" + (i + 1);
+
+        data[i] = {
+          id: transactionId,
+          customer: customerName,
+          product: productText,
+          quantity: quantity,
+          amount: "USD" +amount,
+        };
+        i++;
+        updateTable();
+      }
+
+      function updateTable() {
+        var tableBody = document
+          .getElementById("transaction-records")
+          .getElementsByTagName("tbody")[0];
+        tableBody.innerHTML = "";
+
+        for (var j = 0; j < data.length; j++) {
+          var row =
+            "<tr>" +
+            "<td>" +
+            data[j].id +
+            "</td>" +
+            "<td>" +
+            data[j].customer +
+            "</td>" +
+            "<td>" +
+            data[j].product +
+            "</td>" +
+            "<td>" +
+            data[j].quantity +
+            "</td>" +
+            "<td>" +
+            data[j].amount +
+            "</td>" +
+            "</tr>";
+          tableBody.innerHTML += row;
+        }
+      }
+      document
+        .getElementById("transaction-form")
+        .addEventListener("submit", addTransaction);
+    </script>
+  </body>
+</html>
